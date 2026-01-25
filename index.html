@@ -6,33 +6,162 @@
   <title>Rohit Suresh</title>
   <style>
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      max-width: 720px;
-      margin: 80px auto;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      max-width: 700px;
+      margin: 60px auto;
       padding: 0 20px;
       line-height: 1.6;
-      color: #111;
+      color: #e8f0ef;
+      background-color: #0b4c48;
     }
-    a {
-      color: #111;
+    
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .tagline {
+      font-size: 1.1rem;
+      color: #a8c5c3;
+      margin-bottom: 20px;
+    }
+    
+    .links {
+      margin: 30px 0 50px 0;
+    }
+    
+    .links a {
+      color: #5fd4c8;
       text-decoration: none;
-      border-bottom: 1px solid #ddd;
+      margin-right: 20px;
+      transition: color 0.2s;
     }
-    a:hover {
-      border-bottom-color: #111;
+    
+    .links a:hover {
+      color: #7ee8dd;
+    }
+    
+    h2 {
+      font-size: 1.4rem;
+      color: #fff;
+      margin: 40px 0 20px 0;
+      font-weight: 500;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .job, .project {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 2px solid rgba(95, 212, 200, 0.3);
+      transition: all 0.2s;
+    }
+    
+    .job:hover, .project:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-left-color: #5fd4c8;
+    }
+    
+    .job h3, .project h3 {
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+    
+    .meta {
+      color: #7a9997;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+    
+    .job p, .project p {
+      color: #c2d6d4;
+      margin: 8px 0;
+    }
+    
+    .tech {
+      color: #5fd4c8;
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
+    
+    @media (max-width: 600px) {
+      body {
+        margin: 30px auto;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .links a {
+        display: block;
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
 <body>
   <h1>Rohit Suresh</h1>
+  <p class="tagline">CS senior at UConn studying cybersecurity and systems</p>
+  
+  <div class="links">
+    <a href="https://github.com/RHSuresh">github</a>
+    <a href="https://www.linkedin.com/in/rohitsuresh74/">linkedin</a>
+    <a href="mailto:rhsuresh2000@gmail.com">email</a>
+  </div>
+  
+  <div class="section">
+    <h2>About</h2>
+    <p style="color: #c2d6d4; margin-bottom: 12px;">
+      I'm interested in security, full-stack development, and building things that work. 
+      Currently finishing my BS in Computer Science with a cybersecurity concentration at UConn, 
+      graduating May 2026.
+    </p>
+    <p style="color: #c2d6d4;">
+      I have certifications in CompTIA Security+ and AWS Cloud Practitioner, and I like working 
+      on projects that combine security principles with practical applications.
+    </p>
+  </div>
+  
+  <div class="section">
+    <h2>Work</h2>
+    
+    <div class="job">
+      <h3>Full-Stack Developer Intern</h3>
+      <div class="meta">LeaderLev Consulting · June 2025 - Present</div>
+      <p>Working on a secure address confirmation application. Built the UI and API, created an OAuth-enabled Slack app for easier access, and designed PostgreSQL database tables for client data management.</p>
+      <div class="tech">PostgreSQL, OAuth, Slack API</div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2>Projects</h2>
+    
+    <div class="project">
+      <h3>HTTP Security Headers Monitor</h3>
+      <p>Scanned 20,000 websites to analyze security header adoption. Found that 36.6% of CSP policies use unsafe directives, and .GOV sites have way better HSTS adoption (77.1%) compared to .EDU sites (41.2%).</p>
+      <div class="tech">Python, aiohttp, asyncio, matplotlib</div>
+    </div>
+    
+    <div class="project">
+      <h3>Pet Adoption Website</h3>
+      <p>Full-stack React app for pet adoption with a Flask backend. Used Docker for containerization and set up CI/CD with GitHub Actions. Built with a team of 4.</p>
+      <div class="tech">React, Flask, SQLite, Docker, GitHub CI/CD</div>
+    </div>
+    
+    <div class="project">
+      <h3>Elevator Control System Simulator</h3>
+      <p>Real-time simulator for monitoring elevator requests and movement. Built the UI and service layer in C++ with Allegro 5 graphics, and created a CLI to read test data from files.</p>
+      <div class="tech">C++, Allegro 5, OOP</div>
+    </div>
+  </div>
 
-  <p>
-    Computer Science senior focused on cybersecurity and systems.
-  </p>
-
-  <p>
-    <a href="https://github.com/RHSuresh">GitHub</a> ·
-    <a href="https://github.com/RHSuresh/Projects">Projects</a>
-  </p>
 </body>
 </html>
