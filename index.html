@@ -10,8 +10,8 @@
       max-width: 700px;
       margin: 60px auto;
       padding: 0 20px;
-      line-height: 1.6;
-      color: #e8f0ef;
+      line-height: 1.7;
+      color: #f0f8f7;
       background-color: #0b4c48;
     }
     
@@ -26,7 +26,7 @@
     
     .tagline {
       font-size: 1.1rem;
-      color: #a8c5c3;
+      color: #c5dbd9;
       margin-bottom: 20px;
       opacity: 0;
       animation: fadeInUp 0.8s ease 0.2s forwards;
@@ -39,14 +39,15 @@
     }
     
     .links a {
-      color: #5fd4c8;
+      color: #6fe0d4;
       text-decoration: none;
       margin-right: 20px;
       transition: color 0.2s;
+      font-weight: 500;
     }
     
     .links a:hover {
-      color: #7ee8dd;
+      color: #8ff0e6;
     }
     
     h2 {
@@ -71,7 +72,7 @@
       transform: translateY(0);
     }
     
-    .job, .project {
+    .job, .project, .cert {
       margin-bottom: 30px;
       padding: 20px;
       background: rgba(255, 255, 255, 0.03);
@@ -84,12 +85,12 @@
       border-radius: 4px;
     }
     
-    .job.visible, .project.visible {
+    .job.visible, .project.visible, .cert.visible {
       opacity: 1;
       transform: translateX(0);
     }
     
-    .job:hover, .project:hover {
+    .job:hover, .project:hover, .cert:hover {
       background: rgba(255, 255, 255, 0.05);
       border-image: linear-gradient(to bottom, #7ee8dd, #5fd4c8) 1;
       transform: translateX(5px);
@@ -99,32 +100,48 @@
         0 4px 12px rgba(0, 0, 0, 0.2);
     }
     
-    .job.visible:hover, .project.visible:hover {
+    .job.visible:hover, .project.visible:hover, .cert.visible:hover {
       transform: translateX(5px);
     }
     
-    .job h3, .project h3 {
+    .job h3, .project h3, .cert h3 {
       font-size: 1.1rem;
       color: #fff;
       margin-bottom: 4px;
       font-weight: 500;
     }
     
+    .cert h3 a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 2px;
+    }
+    
+    .cert h3 a:hover {
+      color: #6fe0d4;
+      border-bottom-color: #6fe0d4;
+    }
+    
     .meta {
-      color: #7a9997;
+      color: #93b3b1;
       font-size: 0.9rem;
       margin-bottom: 12px;
+      font-weight: 500;
     }
     
     .job p, .project p {
-      color: #c2d6d4;
+      color: #d8e8e6;
       margin: 8px 0;
+      font-size: 0.95rem;
     }
     
     .tech {
-      color: #5fd4c8;
+      color: #6fe0d4;
       font-size: 0.9rem;
       margin-top: 8px;
+      font-weight: 500;
     }
     
     @keyframes fadeInUp {
@@ -157,7 +174,7 @@
 <body>
   <h1>Rohit Suresh</h1>
   <p class="tagline">Senior Computer Science major at UConn concentrating in Cybersecurity.
-                     Pursuing a minor in Cognitive Science.
+                     Pursuing a minor in Cognitive Science
   </p>
   
   <div class="links">
@@ -170,18 +187,34 @@
   
   <div class="section">
     <h2>About Me</h2>
-    <p style="color: #c2d6d4; margin-bottom: 12px;" class="reveal">
+    <p style="color: #d8e8e6; margin-bottom: 12px;" class="reveal">
       I'm interested in security, full-stack development, and building scalable solutions to client needs. 
       Currently finishing my BS in Computer Science with a cybersecurity concentration and Cognitive Science minor at UConn, 
       graduating May 2026.
     </p>
-    <p style="color: #c2d6d4;" class="reveal">
+    <p style="color: #d8e8e6;" class="reveal">
       I am CompTIA Security+ and AWS Cloud Practitioner certified.
       I like working on projects that combine security principles with practical applications.
       My passion lies with understanding the intersection between Cognitive Science and Artificial Intelligence. We see how companies like OpenAI, Anthropic, etc. are 
       making their models as human like as possible. Understanding how cognition works within humans gives me a better understanding of how to safeguard applications and services
       from AI threats. 
     </p>
+  </div>
+  
+  <div class="section">
+    <h2>Certifications</h2>
+    
+    <div class="cert reveal">
+      <h3><a href="https://cp.certmetrics.com/CompTIA/en/public/verify/credential/73ce7300c28e4b879b93fef3eacd7969" target="_blank" rel="noopener noreferrer">CompTIA Security+</a></h3>
+      <div class="meta">CompTIA · Certified</div>
+      <p>Foundational cybersecurity certification covering network security, compliance, operational security, threats and vulnerabilities, application security, access control, and cryptography.</p>
+    </div>
+    
+    <div class="cert reveal">
+      <h3><a href="https://www.credly.com/badges/0e01344c-6757-4457-9449-8d466077b9ca" target="_blank" rel="noopener noreferrer">AWS Certified Cloud Practitioner</a></h3>
+      <div class="meta">Amazon Web Services · Certified</div>
+      <p>Validates understanding of AWS Cloud concepts, services, security, architecture, pricing, and support fundamentals.</p>
+    </div>
   </div>
   
   <div class="section">
@@ -226,6 +259,12 @@
   
   <div class="section">
     <h2>Projects</h2>
+    
+    <div class="project reveal">
+      <h3>Illegal Parking Detection System</h3>
+      <p>Built a computer vision system for detecting illegally parked vehicles using real-time video analysis. Developed during Voxel51 AI Hackathon with a focus on automated monitoring and violation detection.</p>
+      <div class="tech">MongoDB, Docker, Jupyter Notebook, Computer Vision</div>
+    </div>
     
     <div class="project reveal">
       <h3>HTTP Security Headers Monitor</h3>
