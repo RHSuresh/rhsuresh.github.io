@@ -1,318 +1,308 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rohit Suresh</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'IBM Plex Sans', sans-serif;
-      max-width: 700px;
-      margin: 60px auto;
-      padding: 0 20px;
-      line-height: 1.7;
-      color: #f0f8f7;
-      background-color: #0b4c48;
-    }
-    
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: #fff;
-      opacity: 0;
-      animation: fadeInUp 0.8s ease forwards;
-    }
-    
-    .tagline {
-      font-size: 1.1rem;
-      color: #c5dbd9;
-      margin-bottom: 20px;
-      opacity: 0;
-      animation: fadeInUp 0.8s ease 0.2s forwards;
-    }
-    
-    .links {
-      margin: 30px 0 50px 0;
-      opacity: 0;
-      animation: fadeInUp 0.8s ease 0.4s forwards;
-    }
-    
-    .links a {
-      color: #6fe0d4;
-      text-decoration: none;
-      margin-right: 20px;
-      transition: color 0.2s;
-      font-weight: 500;
-    }
-    
-    .links a:hover {
-      color: #8ff0e6;
-    }
-    
-    h2 {
-      font-size: 1.4rem;
-      color: #fff;
-      margin: 40px 0 20px 0;
-      font-weight: 500;
-    }
-    
-    .section {
-      margin-bottom: 30px;
-    }
-    
-    .section > p {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    
-    .section > p.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    .job, .project, .cert {
-      margin-bottom: 30px;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.03);
-      border-left: 3px solid transparent;
-      border-image: linear-gradient(to bottom, #5fd4c8, #3a9d94) 1;
-      transition: all 0.3s ease;
-      opacity: 0;
-      transform: translateX(-30px);
-      position: relative;
-      border-radius: 4px;
-    }
-    
-    .job.visible, .project.visible, .cert.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    
-    .job:hover, .project:hover, .cert:hover {
-      background: rgba(255, 255, 255, 0.05);
-      border-image: linear-gradient(to bottom, #7ee8dd, #5fd4c8) 1;
-      transform: translateX(5px);
-      box-shadow: 
-        0 0 20px rgba(95, 212, 200, 0.15),
-        0 0 40px rgba(95, 212, 200, 0.08),
-        0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-    
-    .job.visible:hover, .project.visible:hover, .cert.visible:hover {
-      transform: translateX(5px);
-    }
-    
-    .job h3, .project h3, .cert h3 {
-      font-size: 1.1rem;
-      color: #fff;
-      margin-bottom: 4px;
-      font-weight: 500;
-    }
-    
-    .cert h3 a {
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.2s ease;
-      border-bottom: 2px solid transparent;
-      padding-bottom: 2px;
-    }
-    
-    .cert h3 a:hover {
-      color: #6fe0d4;
-      border-bottom-color: #6fe0d4;
-    }
-    
-    .meta {
-      color: #93b3b1;
-      font-size: 0.9rem;
-      margin-bottom: 12px;
-      font-weight: 500;
-    }
-    
-    .job p, .project p {
-      color: #d8e8e6;
-      margin: 8px 0;
-      font-size: 0.95rem;
-    }
-    
-    .tech {
-      color: #6fe0d4;
-      font-size: 0.9rem;
-      margin-top: 8px;
-      font-weight: 500;
-    }
-    
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    @media (max-width: 600px) {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rohit Suresh</title>
+
+    <style>
       body {
-        margin: 30px auto;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "IBM Plex Sans", sans-serif;
+        max-width: 720px;
+        margin: 60px auto;
+        padding: 0 20px;
+        line-height: 1.7;
+        color: #f0f8f7;
+        background-color: #0b4c48;
       }
-      
+
       h1 {
-        font-size: 2rem;
+        font-size: 2.6rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #fff;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease forwards;
       }
-      
+
+      .tagline {
+        font-size: 1.15rem;
+        color: #c5dbd9;
+        margin-bottom: 26px;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease 0.2s forwards;
+      }
+
+      .links {
+        margin: 30px 0 50px 0;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease 0.4s forwards;
+      }
+
       .links a {
-        display: block;
-        margin: 10px 0;
+        color: #6fe0d4;
+        text-decoration: none;
+        margin-right: 20px;
+        font-weight: 500;
       }
-    }
-  </style>
-</head>
-<body>
-  <h1>Rohit Suresh</h1>
-  <p class="tagline">Senior Computer Science major at UConn concentrating in Cybersecurity.
-                     Pursuing a minor in Cognitive Science.
-  </p>
-  
-  <div class="links">
-    <a href="https://github.com/RHSuresh">github</a>
-    <a href="https://www.linkedin.com/in/rohitsuresh74/">linkedin</a>
-    <a href="mailto:rhsuresh2000@gmail.com">email</a>
-    <a href="https://cal.com/rohit-h-suresh/15min">book a chat!</a>
-  </div>
 
-  
-  <div class="section">
-    <h2>About Me</h2>
-    <p style="color: #d8e8e6; margin-bottom: 12px;" class="reveal">
-      I'm interested in security, full-stack development, and building scalable solutions to client needs. 
-      Currently finishing my BS in Computer Science with a cybersecurity concentration and Cognitive Science minor at UConn, 
-      graduating May 2026.
-    </p>
-    <p style="color: #d8e8e6;" class="reveal">
-      I am CompTIA Security+ and AWS Cloud Practitioner certified.
-      I like working on projects that combine security principles with practical applications.
-      My passion lies with understanding the intersection between Cognitive Science and Artificial Intelligence. We see how companies like OpenAI, Anthropic, etc. are 
-      making their models as human like as possible. Understanding how cognition works within humans gives me a better understanding of how to safeguard applications and services
-      from AI threats. 
-    </p>
-  </div>
-  
-  <div class="section">
-    <h2>Certifications</h2>
-    
-    <div class="cert reveal">
-      <h3><a href="https://cp.certmetrics.com/CompTIA/en/public/verify/credential/73ce7300c28e4b879b93fef3eacd7969" target="_blank" rel="noopener noreferrer">CompTIA Security+</a></h3>
-      <div class="meta">CompTIA · Certified</div>
-      <p>Foundational cybersecurity certification covering network security, compliance, operational security, threats and vulnerabilities, application security, access control, and cryptography.</p>
-    </div>
-    
-    <div class="cert reveal">
-      <h3><a href="https://www.credly.com/badges/0e01344c-6757-4457-9449-8d466077b9ca" target="_blank" rel="noopener noreferrer">AWS Certified Cloud Practitioner</a></h3>
-      <div class="meta">Amazon Web Services · Certified</div>
-      <p>Validates understanding of AWS Cloud concepts, services, security, architecture, pricing, and support fundamentals.</p>
-    </div>
-  </div>
-  
-  <div class="section">
-    <h2>Work</h2>
+      .links a:hover {
+        color: #8ff0e6;
+      }
 
-    <div class="job reveal">
-      <h3>Full-Stack Developer</h3>
-      <div class="meta">LeaderLev Consulting · Jun 2025 – Present</div>
-      <p>
-        Building and shipping production SaaS features across two platforms:
-        <strong>BridgeNote.io</strong> and <strong>ConfirmAddress.app</strong>.
-        Owned frontend development, backend integrations, and security-sensitive workflows.
-      </p>
-      <p>
-        Implemented authenticated systems using Supabase (Auth, RLS/RBAC, Edge Functions),
-        designed secure data models in PostgreSQL, and integrated third-party services
-        including Stripe, Slack (OAuth 2.0), Google Maps, and CRM APIs.
-      </p>
-      <div class="tech">
-        React, TypeScript, Supabase, PostgreSQL (RLS), OAuth 2.0, Stripe, Vercel
-      </div>
-    </div>
+      h2 {
+        font-size: 1.4rem;
+        color: #fff;
+        margin: 50px 0 20px 0;
+        font-weight: 500;
+      }
 
-    <div class="job reveal">
-      <h3>Full-Stack Developer</h3>
-      <div class="meta">Trust2Connect.ai · Dec 2025</div>
-      <p>
-        Built a production-ready data extraction and transformation pipeline to migrate
-        enterprise meeting intelligence into a structured CRM format.
-      </p>
-      <p>
-        Engineered custom workflows to bypass enterprise API limitations, parsed complex
-        unstructured exports into clean datasets, and ensured cross-platform reliability
-        during large-scale archival operations.
-      </p>
-      <div class="tech">
-        Python, OAuth 2.0, Google Drive API, ETL, Data Parsing
-      </div>
-    </div>
-  </div>
+      .section {
+        margin-bottom: 40px;
+      }
 
-  
-  <div class="section">
-    <h2>Projects</h2>
-    
-    <div class="project reveal">
-      <h3>Illegal Parking Detection System</h3>
-      <p>Built a computer vision system for detecting illegally parked vehicles using real-time video analysis. Developed during Voxel51 AI Hackathon with a focus on automated monitoring and violation detection.</p>
-      <div class="tech">MongoDB, Docker, Jupyter Notebook, Computer Vision</div>
-    </div>
-    
-    <div class="project reveal">
-      <h3>HTTP Security Headers Monitor</h3>
-      <p>Scanned 20,000 websites to analyze security header adoption. Found that 36.6% of CSP policies use unsafe directives, and .GOV sites have way better HSTS adoption (77.1%) compared to .EDU sites (41.2%).</p>
-      <div class="tech">Python, aiohttp, asyncio, matplotlib</div>
-    </div>
-    
-    <div class="project reveal">
-      <h3>Hate Speech Classification Model</h3>
-      <p>Utilizes a Dynamically Generated Hatespeech Dataset found on github. We use a python script to clean and tokenize the data while using logistic regression to train the model to classify dataset entries as hate speech or not.</p>
-      <div class="tech">Python, Pandas, NumPy</div>
-    </div>
-    
-    <div class="project reveal">
-      <h3>Pet Adoption Website</h3>
-      <p>Full-stack React app for pet adoption with a Flask backend. Used Docker for containerization and set up CI/CD with GitHub Actions. Built with a team of 4.</p>
-      <div class="tech">React, Flask, SQLite, Docker, GitHub CI/CD</div>
-    </div>
-    
-    <div class="project reveal">
-      <h3>Elevator Control System Simulator</h3>
-      <p>Real-time simulator for monitoring elevator requests and movement. Built the UI and service layer in C++ with Allegro 5 graphics, and created a CLI to read test data from files.</p>
-      <div class="tech">C++, Allegro 5, OOP</div>
-    </div>
-  </div>
+      .job,
+      .project,
+      .cert {
+        margin-bottom: 30px;
+        padding: 22px;
+        background: rgba(255, 255, 255, 0.03);
+        border-left: 3px solid transparent;
+        border-image: linear-gradient(to bottom, #5fd4c8, #3a9d94) 1;
+        transition: all 0.3s ease;
+        opacity: 0;
+        transform: translateX(-25px);
+        border-radius: 6px;
+      }
 
-  <script>
-    // Intersection Observer for scroll animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
+      .visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          // Add a slight stagger delay based on position
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, index * 100);
+      .job:hover,
+      .project:hover,
+      .cert:hover {
+        background: rgba(255, 255, 255, 0.06);
+        transform: translateX(6px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+      }
+
+      .job h3,
+      .project h3,
+      .cert h3 {
+        color: #fff;
+        margin-bottom: 6px;
+        font-weight: 500;
+      }
+
+      .meta {
+        color: #93b3b1;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+
+      .tech {
+        color: #6fe0d4;
+        font-size: 0.9rem;
+        margin-top: 10px;
+        font-weight: 500;
+      }
+
+      .cta {
+        margin-top: 60px;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      .cta a {
+        color: #0b4c48;
+        background: #6fe0d4;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
         }
-      });
-    }, observerOptions);
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
 
-    // Observe all elements with 'reveal' class
-    document.querySelectorAll('.reveal').forEach((el) => {
-      observer.observe(el);
-    });
-  </script>
-</body>
+  <body>
+    <h1>Rohit Suresh</h1>
+    <p class="tagline">
+      Security-focused Full-Stack Developer building production systems with
+      secure auth, payments, and cloud infrastructure.
+    </p>
+
+    <div class="links">
+      <a href="https://github.com/RHSuresh">github</a>
+      <a href="https://www.linkedin.com/in/rohitsuresh74/">linkedin</a>
+      <a href="mailto:rhsuresh2000@gmail.com">email</a>
+      <a href="https://cal.com/rohit-h-suresh/15min">book a chat</a>
+    </div>
+
+    <div class="section">
+      <h2>About</h2>
+      <p class="reveal">
+        Senior Computer Science student at UConn (Cybersecurity concentration,
+        Cognitive Science minor), graduating May 2026. CompTIA Security+ and AWS
+        Cloud Practitioner certified.
+      </p>
+      <p class="reveal">
+        I build secure, scalable systems and enjoy working at the intersection
+        of software, security, and human behavior. My background in cognitive
+        science informs how I think about AI misuse, adversarial behavior, and
+        system abuse.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Certifications</h2>
+
+      <div class="cert reveal">
+        <h3>CompTIA Security+</h3>
+        <div class="meta">CompTIA · Certified</div>
+        <p>
+          Foundational cybersecurity certification covering network security,
+          threats, vulnerabilities, access control, cryptography, and
+          operational security.
+        </p>
+      </div>
+
+      <div class="cert reveal">
+        <h3>AWS Certified Cloud Practitioner</h3>
+        <div class="meta">Amazon Web Services · Certified</div>
+        <p>
+          Validates understanding of cloud concepts, AWS services, security,
+          pricing models, and shared responsibility architecture.
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Work</h2>
+
+      <div class="job reveal">
+        <h3>Full-Stack Developer</h3>
+        <div class="meta">LeaderLev Consulting · Jun 2025 – Present</div>
+        <p>
+          Shipped production SaaS features across BridgeNote.io and
+          ConfirmAddress.app. Owned frontend, backend integrations, and
+          security-sensitive workflows.
+        </p>
+        <p>
+          Implemented authenticated systems using Supabase (RLS/RBAC), designed
+          secure PostgreSQL schemas, and integrated Stripe, OAuth providers, and
+          external APIs.
+        </p>
+        <div class="tech">
+          React · TypeScript · Supabase · PostgreSQL · OAuth 2.0 · Stripe
+        </div>
+      </div>
+
+      <div class="job reveal">
+        <h3>Full-Stack Developer</h3>
+        <div class="meta">Trust2Connect.ai · Dec 2025</div>
+        <p>
+          Built a production-ready data extraction and transformation pipeline
+          to migrate enterprise meeting intelligence into structured CRM data.
+        </p>
+        <div class="tech">Python · OAuth 2.0 · Google Drive API · ETL</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Selected Work & Projects</h2>
+
+      <p class="reveal" style="color: #c5dbd9">
+        Available for short-term consulting, security reviews, and full-stack
+        development.
+      </p>
+
+      <div class="project reveal">
+        <h3>Illegal Parking Detection System</h3>
+        <p>
+          Designed a computer vision pipeline to detect illegally parked
+          vehicles from real-time video feeds for automated monitoring use
+          cases.
+        </p>
+        <div class="tech">Computer Vision · MongoDB · Docker · Jupyter</div>
+      </div>
+
+      <div class="project reveal">
+        <h3>HTTP Security Headers Monitor</h3>
+        <p>
+          Scanned and analyzed 20,000 websites to assess adoption of HTTP
+          security headers. Identified CSP misconfigurations and compared
+          security posture across domains.
+        </p>
+        <div class="tech">Python · asyncio · aiohttp · matplotlib</div>
+      </div>
+
+      <div class="project reveal">
+        <h3>Hate Speech Classification Model</h3>
+        <p>
+          Built an end-to-end machine learning pipeline to classify hate speech
+          using cleaned and tokenized datasets with logistic regression.
+        </p>
+        <div class="tech">Python · Pandas · NumPy · Machine Learning</div>
+      </div>
+
+      <div class="project reveal">
+        <h3>Pet Adoption Platform</h3>
+        <p>
+          Full-stack React and Flask application for managing pet adoptions.
+          Containerized services and implemented CI/CD with GitHub Actions.
+        </p>
+        <div class="tech">React · Flask · Docker · SQLite · GitHub Actions</div>
+      </div>
+
+      <div class="project reveal">
+        <h3>Elevator Control System Simulator</h3>
+        <p>
+          Real-time elevator control simulator with graphical output and
+          CLI-driven testing for request scheduling and movement logic.
+        </p>
+        <div class="tech">C++ · Allegro 5 · Object-Oriented Design</div>
+      </div>
+    </div>
+
+    <div class="cta">
+      <p>Have a project or idea you want to ship securely?</p>
+      <a href="https://cal.com/rohit-h-suresh/15min"
+        >Schedule a 15-minute call</a
+      >
+    </div>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
 </html>
