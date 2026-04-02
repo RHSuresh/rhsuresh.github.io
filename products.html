@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products - Rohit Suresh</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@300;400&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #f7f5f0;
+      --surface: #fdfcf9;
+      --border: #ddd9d0;
+      --text: #1a1814;
+      --text-secondary: #6b6560;
+      --text-muted: #a09990;
+      --accent: #1a1814;
+      --highlight: #e8e4dc;
+    }
+
+    body {
+      font-family: 'Instrument Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 80px 24px 120px;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 64px;
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    nav a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    h1 {
+      font-family: "EB Garamond", serif;
+      font-size: clamp(32px, 5vw, 42px);
+      font-weight: 400;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: 40px;
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+
+    .ponder-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 40px;
+      border-radius: 4px;
+      position: relative;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+
+    .ponder-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--text);
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+
+    .ponder-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+    }
+
+    .ponder-title {
+      font-family: "EB Garamond", serif;
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .ponder-badge {
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .ponder-desc {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .ponder-desc strong {
+      color: var(--text);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 12px;
+      font-family: "EB Garamond", serif;
+      font-size: 20px;
+      line-height: 1.3;
+    }
+
+    .waitlist-btn {
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: var(--accent);
+      color: var(--surface);
+      border: none;
+      padding: 12px 28px;
+      cursor: pointer;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .waitlist-btn::after {
+      content: '→';
+      margin-left: 8px;
+      transition: transform 0.2s ease;
+    }
+
+    .waitlist-btn:hover {
+      box-shadow: 0 4px 12px rgba(26, 24, 20, 0.15);
+      transform: translateY(-1px);
+    }
+
+    .waitlist-btn:hover::after {
+      transform: translateX(4px);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="updated_portfolio.html">← Back to Main Page</a>
+  </nav>
+
+  <h1>Products</h1>
+
+  <div class="ponder-card">
+    <div class="ponder-header">
+      <div class="ponder-title">Ponder</div>
+      <div class="ponder-badge">Coming Soon</div>
+    </div>
+
+    <p class="ponder-desc">
+      <strong>Localized data ownership —<br>your data, in your hands, in your control.</strong>
+      A beautifully minimal productivity environment designed for focus, speed, and privacy.
+      Built with local-first architecture to ensure your thoughts never leave your device unless you want them to.
+    </p>
+
+    <a href="#waitlist" class="waitlist-btn">Join the Waitlist</a>
+  </div>
+</body>
+
+</html>
