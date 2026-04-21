@@ -599,20 +599,23 @@
   </div>
 
 <script>
-// ── Theme Toggle Logic ──
+// ── Theme Toggle Logic with localStorage ──
 const btn = document.getElementById('theme-btn');
-let isDark = true; // default theme defined in HTML tag
+
+// Restore saved preference, default to dark
+const saved = localStorage.getItem('theme');
+let isDark = saved ? saved === 'dark' : true;
+document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+btn.innerText = isDark ? '[LIGHT]' : '[DARK]';
 
 function toggleTheme() {
   isDark = !isDark;
   document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
   btn.innerText = isDark ? '[LIGHT]' : '[DARK]';
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
 }
 
 btn.addEventListener('click', toggleTheme);
-
-// Initialize button text based on default theme
-btn.innerText = isDark ? '[LIGHT]' : '[DARK]';
 
 // ── Scroll Reveal (Intersection Observer) ──
 const revealObserver = new IntersectionObserver((entries) => {

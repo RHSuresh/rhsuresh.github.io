@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
@@ -41,7 +41,7 @@
       padding: 0;
     }
 
-    :root {
+    :root, [data-theme="light"] {
       --bg: #f7f5f0;
       --surface: #fdfcf9;
       --border: #ddd9d0;
@@ -50,6 +50,19 @@
       --text-muted: #a09990;
       --accent: #1a1814;
       --highlight: #e8e4dc;
+      --cta-text: #fdfcf9;
+    }
+
+    [data-theme="dark"] {
+      --bg: #111111;
+      --surface: #181818;
+      --border: #333333;
+      --text: #ededed;
+      --text-secondary: #a0a0a0;
+      --text-muted: #666666;
+      --accent: #ededed;
+      --highlight: #222222;
+      --cta-text: #111111;
     }
 
     body {
@@ -60,6 +73,30 @@
       margin: 0 auto;
       padding: 80px 24px 120px;
       line-height: 1.6;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    /* ── Topbar ── */
+    .topbar {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      z-index: 100;
+    }
+
+    #theme-btn {
+      background: none;
+      border: none;
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    #theme-btn:hover {
+      color: var(--text);
     }
 
     nav {
@@ -161,7 +198,7 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       background: var(--accent);
-      color: var(--surface);
+      color: var(--cta-text);
       border: none;
       padding: 12px 28px;
       cursor: pointer;
@@ -202,6 +239,10 @@
 </head>
 
 <body>
+  <div class="topbar">
+    <button id="theme-btn">[LIGHT]</button>
+  </div>
+
   <nav>
     <a href="index.html">← Back to Main Page</a>
   </nav>
@@ -222,6 +263,26 @@
 
     <a href="#waitlist" class="waitlist-btn">Join the Waitlist</a>
   </div>
+
+<script>
+// ── Theme Toggle Logic with localStorage ──
+const btn = document.getElementById('theme-btn');
+
+// Restore saved preference, default to dark
+const saved = localStorage.getItem('theme');
+let isDark = saved ? saved === 'dark' : true;
+document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+btn.innerText = isDark ? '[LIGHT]' : '[DARK]';
+
+function toggleTheme() {
+  isDark = !isDark;
+  document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+  btn.innerText = isDark ? '[LIGHT]' : '[DARK]';
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+}
+
+btn.addEventListener('click', toggleTheme);
+</script>
 </body>
 
 </html>
