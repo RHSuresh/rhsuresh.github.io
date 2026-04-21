@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Products — Rohit Suresh | Ponder & More</title>
-  <meta name="description" content="Products and services by Rohit Suresh. Ponder — a beautifully minimal, local-first productivity environment built for focus, speed, and privacy.">
+  <title>Products & Services — Rohit Suresh</title>
+  <meta name="description" content="Products and services by Rohit Suresh. From Ponder, a local-first productivity app, to production ETL pipelines and data integration consulting.">
   <link rel="canonical" href="https://rhsuresh.github.io/products.html">
   <meta name="theme-color" content="#f7f5f0">
 
@@ -18,16 +18,16 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://rhsuresh.github.io/products.html">
-  <meta property="og:title" content="Products — Rohit Suresh | Ponder & More">
-  <meta property="og:description" content="Ponder — a beautifully minimal, local-first productivity environment built for focus, speed, and privacy.">
+  <meta property="og:title" content="Products & Services — Rohit Suresh">
+  <meta property="og:description" content="From Ponder, a local-first productivity app, to production ETL pipelines and data integration consulting.">
   <meta property="og:image" content="https://rhsuresh.github.io/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Products — Rohit Suresh | Ponder & More">
-  <meta name="twitter:description" content="Ponder — a beautifully minimal, local-first productivity environment built for focus, speed, and privacy.">
+  <meta name="twitter:title" content="Products & Services — Rohit Suresh">
+  <meta name="twitter:description" content="From Ponder, a local-first productivity app, to production ETL pipelines and data integration consulting.">
   <meta name="twitter:image" content="https://rhsuresh.github.io/og-image.png">
   <link
     href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@300;400&display=swap"
@@ -224,6 +224,157 @@
       transform: translateX(4px);
     }
 
+    /* ── Section Divider ── */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 56px 0 40px;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
+
+    .section-divider::before,
+    .section-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .section-label {
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    /* ── Service Card ── */
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 40px;
+      border-radius: 4px;
+      position: relative;
+      animation: fadeUp 0.6s 0.4s ease both;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      background: linear-gradient(90deg, var(--text-muted), var(--text), var(--text-muted));
+      background-size: 200% 100%;
+      animation: accentShimmer 6s ease-in-out infinite;
+    }
+
+    @keyframes accentShimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .service-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .service-title {
+      font-family: "EB Garamond", serif;
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .service-badge {
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #34d399;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #34d399;
+      box-shadow: 0 0 6px rgba(52, 211, 153, 0.5);
+      animation: pulse-badge 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-badge {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .service-desc {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+
+    .service-desc strong {
+      color: var(--text);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 12px;
+      font-family: "EB Garamond", serif;
+      font-size: 20px;
+      line-height: 1.3;
+    }
+
+    /* ── Capability Pills ── */
+    .capabilities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    .capability {
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      color: var(--text-secondary);
+      background: var(--highlight);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .capability:hover {
+      color: var(--text);
+      border-color: var(--text-muted);
+    }
+
+    /* ── Proof Line ── */
+    .proof {
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
     @keyframes fadeUp {
       from {
         opacity: 0;
@@ -247,7 +398,7 @@
     <a href="index.html">← Back to Main Page</a>
   </nav>
 
-  <h1>Products</h1>
+  <h1>Products & Services</h1>
 
   <div class="ponder-card">
     <div class="ponder-header">
@@ -262,6 +413,40 @@
     </p>
 
     <a href="#waitlist" class="waitlist-btn">Join the Waitlist</a>
+  </div>
+
+  <div class="section-divider">
+    <span class="section-label">Services</span>
+  </div>
+
+  <div class="service-card" id="etl-service">
+    <div class="service-header">
+      <div class="service-title">Data Integration & Automation</div>
+      <div class="service-badge">
+        <span class="badge-dot"></span>
+        Available for Hire
+      </div>
+    </div>
+
+    <p class="service-desc">
+      <strong>End-to-end data pipeline engineering —<br>from extraction to CRM-ready delivery.</strong>
+      I build automated ETL workflows that connect your platforms, sync your data in real time, and eliminate manual processes.
+      From webhook integrations to full database migrations, I deliver production-grade pipelines with validation and error handling baked in.
+    </p>
+
+    <div class="capabilities">
+      <span class="capability">ETL Pipelines</span>
+      <span class="capability">Zapier & Webhook Integrations</span>
+      <span class="capability">CRM Data Migration</span>
+      <span class="capability">API Chaining</span>
+      <span class="capability">OAuth2 Auth Flows</span>
+      <span class="capability">Real-Time Data Sync</span>
+      <span class="capability">Data Validation & QA</span>
+    </div>
+
+    <a href="https://cal.com/rohit-h-suresh/15min" class="waitlist-btn" target="_blank" rel="noopener">Book a Consultation</a>
+
+    <p class="proof">Delivered in production for LeaderLev Consulting & Trust2Connect.ai</p>
   </div>
 
 <script>
