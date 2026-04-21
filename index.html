@@ -97,8 +97,51 @@
       font-weight: 400;
       color: var(--text);
       letter-spacing: -0.02em;
-      margin-bottom: 16px;
-      animation: fadeUp 0.6s ease both;
+      margin-bottom: 0;
+      line-height: 1.2;
+    }
+
+    /* Word-by-word clip reveal */
+    .hero-word {
+      display: inline-block;
+      overflow: hidden;
+      vertical-align: bottom;
+    }
+
+    .hero-word span {
+      display: inline-block;
+      transform: translateY(105%);
+      animation: wordReveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .hero-word:nth-child(1) span { animation-delay: 0.15s; }
+    .hero-word:nth-child(2) span { animation-delay: 0.35s; }
+
+    @keyframes wordReveal {
+      to { transform: translateY(0); }
+    }
+
+    /* Gradient accent line */
+    .hero-accent {
+      display: block;
+      width: 0;
+      height: 2px;
+      margin-top: 14px;
+      margin-bottom: 18px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--text-muted), var(--text), var(--text-muted));
+      background-size: 200% 100%;
+      animation: accentGrow 0.6s 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+                 accentShift 4s 1.2s ease-in-out infinite;
+    }
+
+    @keyframes accentGrow {
+      to { width: 64px; }
+    }
+
+    @keyframes accentShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
     }
 
     .tagline {
@@ -106,7 +149,9 @@
       color: var(--text-secondary);
       line-height: 1.6;
       max-width: 460px;
-      animation: fadeUp 0.6s 0.1s ease both;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeUp 0.6s 0.7s ease both;
     }
 
     nav {
@@ -118,14 +163,21 @@
       font-size: 11px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      animation: fadeUp 0.6s 0.2s ease both;
     }
 
     nav a {
       color: var(--text-secondary);
       text-decoration: none;
       transition: color 0.2s;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: fadeUp 0.5s ease both;
     }
+    nav a:nth-child(1) { animation-delay: 0.85s; }
+    nav a:nth-child(2) { animation-delay: 0.92s; }
+    nav a:nth-child(3) { animation-delay: 0.99s; }
+    nav a:nth-child(4) { animation-delay: 1.06s; }
+    nav a:nth-child(5) { animation-delay: 1.13s; }
     nav a:hover {
       color: var(--text);
     }
@@ -553,8 +605,12 @@
     <button id="theme-btn">[LIGHT]</button>
   </div>
 
-  <header class="reveal">
-    <h1>Rohit Suresh</h1>
+  <header>
+    <h1>
+      <span class="hero-word"><span>Rohit</span></span>
+      <span class="hero-word"><span>Suresh</span></span>
+    </h1>
+    <span class="hero-accent" aria-hidden="true"></span>
     <p class="tagline">Security-focused Full-Stack Developer building production systems with secure auth, payments, and cloud infrastructure.</p>
     <nav>
       <a href="https://github.com/RHSuresh" target="_blank" rel="noopener">github</a>
