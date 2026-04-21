@@ -486,6 +486,65 @@
     header, nav, section {
       animation: none; /* Removed static fadeUp, relying on IntersectionObserver */
     }
+
+    /* ── Footer ── */
+    .site-footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .footer-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #34d399;
+      box-shadow: 0 0 6px rgba(52, 211, 153, 0.5);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
   </style>
 </head>
 <body>
@@ -609,6 +668,19 @@
     <p>Have a project you want to ship securely?</p>
     <a href="https://cal.com/rohit-h-suresh/15min" class="waitlist-btn" target="_blank" rel="noopener">Schedule a call</a>
   </div>
+
+  <footer class="site-footer reveal">
+    <div class="footer-status">
+      <span class="status-dot"></span>
+      Open to opportunities
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/RHSuresh" target="_blank" rel="noopener">github</a>
+      <a href="https://www.linkedin.com/in/rohitsuresh74/" target="_blank" rel="noopener">linkedin</a>
+      <a href="mailto:rhsuresh2000@gmail.com">email</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Rohit Suresh</p>
+  </footer>
 
 <script>
 // ── Theme Toggle Logic with localStorage ──
