@@ -191,6 +191,12 @@
       text-transform: uppercase;
       color: var(--text-muted);
       white-space: nowrap;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .card-meta:hover {
+      color: var(--text);
     }
 
     .card-desc {
@@ -526,7 +532,16 @@
         <div class="carousel" id="projects-carousel">
           <div class="carousel-item">
             <div class="card-header">
+              <span class="card-title">Webquity — ADHD Study Platform (2026)</span>
+              <a href="https://adhdstudyapp.vercel.app" class="card-meta" target="_blank" rel="noopener">View Project ↗</a>
+            </div>
+            <p class="card-desc">Senior Design Project sponsored by Webquity. A gamified, distraction-free task management system for neurodivergent students, featuring an AI "Focus Buddy" and role-based dashboards.</p>
+            <div class="card-tech">React · TypeScript · Supabase · AI · Tailwind CSS · Vite</div>
+          </div>
+          <div class="carousel-item">
+            <div class="card-header">
               <span class="card-title">Human-Limited SOC Simulator (2025)</span>
+              <a href="https://github.com/RHSuresh/HumanLimitedSOCSim" class="card-meta" target="_blank" rel="noopener">View Project ↗</a>
             </div>
             <p class="card-desc">Designed a Python simulation modeling how analyst cognitive load and alert fatigue impact true threat detection over an 8-hour shift, reducing true positives by ~30% under controlled conditions.</p>
             <div class="card-tech">Python · Security Analytics · Cognitive Modeling</div>
@@ -534,6 +549,7 @@
           <div class="carousel-item">
             <div class="card-header">
               <span class="card-title">Illegal Parking Detection System (2025)</span>
+              <a href="https://github.com/RHSuresh/Projects/tree/main/Illegal%20Parking%20Detection" class="card-meta" target="_blank" rel="noopener">View Project ↗</a>
             </div>
             <p class="card-desc">Computer vision pipeline to detect illegally parked vehicles from real-time video feeds for automated monitoring.</p>
             <div class="card-tech">Computer Vision · MongoDB · Docker · Jupyter</div>
@@ -541,6 +557,7 @@
           <div class="carousel-item">
             <div class="card-header">
               <span class="card-title">HTTP Security Headers Monitor (2025)</span>
+              <a href="https://github.com/RHSuresh/Projects/tree/main/4402Project" class="card-meta" target="_blank" rel="noopener">View Project ↗</a>
             </div>
             <p class="card-desc">Scanned and analyzed 20,000 websites to assess HTTP security header adoption. Identified CSP misconfigurations.</p>
             <div class="card-tech">Python · asyncio · aiohttp · matplotlib</div>
@@ -548,6 +565,7 @@
           <div class="carousel-item">
             <div class="card-header">
               <span class="card-title">Hate Speech Classification Model (2025)</span>
+              <a href="https://github.com/RHSuresh/Projects/tree/main/Hate%20Speech%20Classification%20Model" class="card-meta" target="_blank" rel="noopener">View Project ↗</a>
             </div>
             <p class="card-desc">End-to-end ML pipeline to classify hate speech using cleaned and tokenized datasets with logistic regression.</p>
             <div class="card-tech">Python · Pandas · NumPy · Machine Learning</div>
@@ -555,6 +573,7 @@
           <div class="carousel-item">
             <div class="card-header">
               <span class="card-title">Pet Adoption Platform (2025)</span>
+              <a href="https://github.com/RHSuresh/Projects/tree/main/cse2102-spring25-team3-main" class="card-meta" target="_blank" rel="noopener">View Project ↗</a>
             </div>
             <p class="card-desc">Full-stack application for managing pet adoptions with containerized services and CI/CD via GitHub Actions.</p>
             <div class="card-tech">React · Flask · Docker · SQLite · GitHub Actions</div>
