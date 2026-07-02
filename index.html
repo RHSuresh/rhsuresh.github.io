@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en" data-theme="dark">
+
 <head>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -8,7 +9,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rohit Suresh — Security-Focused Full-Stack Developer</title>
-  <meta name="description" content="Security-focused Full-Stack Developer building production systems with secure auth, payments, and cloud infrastructure. CompTIA Security+ and AWS certified.">
+  <meta name="description"
+    content="Security-focused Full-Stack Developer building production systems with secure auth, payments, and cloud infrastructure. CompTIA Security+ and AWS certified.">
   <link rel="canonical" href="https://rhsuresh.github.io/">
   <meta name="theme-color" content="#111111">
 
@@ -16,7 +18,8 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://rhsuresh.github.io/">
   <meta property="og:title" content="Rohit Suresh — Security-Focused Full-Stack Developer">
-  <meta property="og:description" content="Security-focused Full-Stack Developer building production systems with secure auth, payments, and cloud infrastructure. CompTIA Security+ and AWS certified.">
+  <meta property="og:description"
+    content="Security-focused Full-Stack Developer building production systems with secure auth, payments, and cloud infrastructure. CompTIA Security+ and AWS certified.">
   <meta property="og:image" content="https://rhsuresh.github.io/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -24,13 +27,23 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Rohit Suresh — Security-Focused Full-Stack Developer">
-  <meta name="twitter:description" content="Security-focused Full-Stack Developer building production systems with secure auth, payments, and cloud infrastructure.">
+  <meta name="twitter:description"
+    content="Security-focused Full-Stack Developer building production systems with secure auth, payments, and cloud infrastructure.">
   <meta name="twitter:image" content="https://rhsuresh.github.io/og-image.png">
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@300;400&display=swap"
+    rel="stylesheet">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    :root, [data-theme="light"] {
+    :root,
+    [data-theme="light"] {
       --bg: #f7f5f0;
       --surface: #fdfcf9;
       --border: #ddd9d0;
@@ -84,12 +97,15 @@
       cursor: pointer;
       transition: color 0.2s;
     }
+
     #theme-btn:hover {
       color: var(--text);
     }
 
     /* ── Header ── */
-    header { margin-bottom: 64px; }
+    header {
+      margin-bottom: 64px;
+    }
 
     h1 {
       font-family: "EB Garamond", serif;
@@ -114,11 +130,18 @@
       animation: wordReveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
-    .hero-word:nth-child(1) span { animation-delay: 0.15s; }
-    .hero-word:nth-child(2) span { animation-delay: 0.35s; }
+    .hero-word:nth-child(1) span {
+      animation-delay: 0.15s;
+    }
+
+    .hero-word:nth-child(2) span {
+      animation-delay: 0.35s;
+    }
 
     @keyframes wordReveal {
-      to { transform: translateY(0); }
+      to {
+        transform: translateY(0);
+      }
     }
 
     /* Gradient accent line */
@@ -132,16 +155,25 @@
       background: linear-gradient(90deg, var(--text-muted), var(--text), var(--text-muted));
       background-size: 200% 100%;
       animation: accentGrow 0.6s 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards,
-                 accentShift 4s 1.2s ease-in-out infinite;
+        accentShift 4s 1.2s ease-in-out infinite;
     }
 
     @keyframes accentGrow {
-      to { width: 64px; }
+      to {
+        width: 64px;
+      }
     }
 
     @keyframes accentShift {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
+
+      0%,
+      100% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
     }
 
     .tagline {
@@ -173,16 +205,35 @@
       transform: translateY(8px);
       animation: fadeUp 0.5s ease both;
     }
-    nav a:nth-child(1) { animation-delay: 0.85s; }
-    nav a:nth-child(2) { animation-delay: 0.92s; }
-    nav a:nth-child(3) { animation-delay: 0.99s; }
-    nav a:nth-child(4) { animation-delay: 1.06s; }
-    nav a:nth-child(5) { animation-delay: 1.13s; }
+
+    nav a:nth-child(1) {
+      animation-delay: 0.85s;
+    }
+
+    nav a:nth-child(2) {
+      animation-delay: 0.92s;
+    }
+
+    nav a:nth-child(3) {
+      animation-delay: 0.99s;
+    }
+
+    nav a:nth-child(4) {
+      animation-delay: 1.06s;
+    }
+
+    nav a:nth-child(5) {
+      animation-delay: 1.13s;
+    }
+
     nav a:hover {
       color: var(--text);
     }
 
-    section { margin-bottom: 64px; animation: fadeUp 0.6s 0.3s ease both; }
+    section {
+      margin-bottom: 64px;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
 
     .label {
       font-family: "DM Mono", monospace;
@@ -201,7 +252,8 @@
     }
 
     /* ── Certifications & Entries ── */
-    .cert-list, .entries {
+    .cert-list,
+    .entries {
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -215,7 +267,7 @@
       position: relative;
       transition: border-color 0.3s;
     }
-    
+
     .card::before {
       content: '';
       position: absolute;
@@ -296,11 +348,13 @@
       transition: background 0.2s, border-color 0.2s, transform 0.2s;
       background: var(--surface);
     }
+
     .cert-item:hover {
       border-color: var(--text-muted);
       background: var(--bg);
       transform: translateY(-2px);
     }
+
     .cert-name {
       display: block;
       font-family: "EB Garamond", serif;
@@ -308,6 +362,7 @@
       font-weight: 500;
       color: var(--text);
     }
+
     .cert-issuer {
       font-family: "DM Mono", monospace;
       font-size: 10px;
@@ -326,8 +381,12 @@
       align-items: center;
       gap: 16px;
     }
-    .cta p { font-size: 15px; color: var(--text-secondary); }
-    
+
+    .cta p {
+      font-size: 15px;
+      color: var(--text-secondary);
+    }
+
     .waitlist-btn {
       font-family: "DM Mono", monospace;
       font-size: 11px;
@@ -361,15 +420,24 @@
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(12px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     /* ── Intersection Observer Reveal ── */
     .reveal {
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
@@ -382,12 +450,12 @@
       border-radius: 8px;
       padding: 32px;
       /* Remove default border, handle with pseudo-element for glowing effect */
-      border: 1px solid transparent; 
+      border: 1px solid transparent;
       transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s, background 0.4s;
       transform-style: preserve-3d;
       will-change: transform;
     }
-    
+
     .glow-card::before {
       content: '';
       position: absolute;
@@ -401,33 +469,36 @@
       mask-composite: exclude;
       transition: background 0.4s;
     }
-    
+
     .glow-card::after {
       content: '';
       position: absolute;
       inset: 0;
       border-radius: 8px;
-      background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.06), transparent 40%);
+      background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 40%);
       opacity: 0;
       transition: opacity 0.3s;
       pointer-events: none;
     }
+
     [data-theme="light"] .glow-card::after {
-      background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(0,0,0,0.04), transparent 40%);
+      background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(0, 0, 0, 0.04), transparent 40%);
     }
+
     .glow-card:hover::after {
       opacity: 1;
     }
-    
+
     .glow-card:hover {
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
-    
+
     /* ── 3D Carousel Styles ── */
     .carousel-container {
       position: relative;
       width: 100%;
-      height: 480px; /* Adjust based on card height */
+      height: 480px;
+      /* Adjust based on card height */
       margin: 40px 0;
       display: flex;
       flex-direction: column;
@@ -455,6 +526,7 @@
       transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
       cursor: grab;
     }
+
     .carousel:active {
       cursor: grabbing;
     }
@@ -469,7 +541,7 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 24px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       transition: opacity 0.4s, border-color 0.4s;
       backface-visibility: hidden;
       display: flex;
@@ -478,7 +550,7 @@
       user-select: none;
       -webkit-user-select: none;
     }
-    
+
     .carousel-item.active {
       border-color: var(--text-muted);
     }
@@ -527,22 +599,28 @@
       min-width: 40px;
       user-select: none;
     }
-    
+
     /* Mobile adjustments for carousel */
     @media (max-width: 480px) {
-      .carousel, .carousel-item {
+
+      .carousel,
+      .carousel-item {
         width: 260px;
         height: 360px;
         padding: 20px;
       }
+
       .carousel-container {
         height: 420px;
       }
     }
-    
+
     /* Modify existing animations for smooth reveals */
-    header, nav, section {
-      animation: none; /* Removed static fadeUp, relying on IntersectionObserver */
+    header,
+    nav,
+    section {
+      animation: none;
+      /* Removed static fadeUp, relying on IntersectionObserver */
     }
 
     /* ── Footer ── */
@@ -576,8 +654,15 @@
     }
 
     @keyframes pulse-dot {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
     }
 
     .footer-links {
@@ -605,6 +690,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="topbar">
@@ -617,7 +703,8 @@
       <span class="hero-word"><span>Suresh</span></span>
     </h1>
     <span class="hero-accent" aria-hidden="true"></span>
-    <p class="tagline">Security-focused Full-Stack Developer building production systems with secure auth, payments, and cloud infrastructure.</p>
+    <p class="tagline">Security-focused Full-Stack Developer building production systems with secure auth, payments, and
+      cloud infrastructure.</p>
     <nav>
       <a href="https://github.com/RHSuresh" target="_blank" rel="noopener">github</a>
       <a href="https://www.linkedin.com/in/rohitsuresh74/" target="_blank" rel="noopener">linkedin</a>
@@ -629,18 +716,23 @@
 
   <section class="about reveal">
     <p class="label">About</p>
-    <p>UConn College of Engineering Graduate (B.S. in Computer Science with Cybersecurity concentration and Cognitive Science minor). CompTIA Security+ and AWS Cloud Practitioner certified.</p>
-    <p>I build secure, scalable systems and enjoy working at the intersection of software, security, and human behavior. My background in cognitive science influences how I think about AI misuse, adversarial behavior, and system abuse.</p>
+    <p>UConn College of Engineering Graduate (B.S. in Computer Science with Cybersecurity concentration and Cognitive
+      Science minor). CompTIA Security+ and AWS Cloud Practitioner certified.</p>
+    <p>I build secure, scalable systems and enjoy working at the intersection of software, security, and human behavior.
+      My background in cognitive science influences how I think about AI misuse, adversarial behavior, and system abuse.
+    </p>
   </section>
 
   <section class="reveal">
     <p class="label">Certifications</p>
     <div class="cert-list">
-      <a href="https://cp.certmetrics.com/CompTIA/en/public/verify/credential/73ce7300c28e4b879b93fef3eacd7969" class="cert-item" target="_blank" rel="noopener">
+      <a href="https://cp.certmetrics.com/CompTIA/en/public/verify/credential/73ce7300c28e4b879b93fef3eacd7969"
+        class="cert-item" target="_blank" rel="noopener">
         <span class="cert-name">CompTIA Security+</span>
         <span class="cert-issuer">CompTIA · Certified ↗</span>
       </a>
-      <a href="https://www.credly.com/badges/0e01344c-6757-4457-9449-8d466077b9ca" class="cert-item" target="_blank" rel="noopener">
+      <a href="https://www.credly.com/badges/0e01344c-6757-4457-9449-8d466077b9ca" class="cert-item" target="_blank"
+        rel="noopener">
         <span class="cert-name">AWS Certified Cloud Practitioner</span>
         <span class="cert-issuer">AWS · Certified ↗</span>
       </a>
@@ -653,9 +745,11 @@
       <div class="card glow-card">
         <div class="card-header">
           <span class="card-title">Full-Stack Developer — LeaderLev Consulting</span>
-          <span class="card-meta">Jun 2025 – Present</span>
+          <span class="card-meta">Jun 2025 – June 2026</span>
         </div>
-        <p class="card-desc">Shipped production SaaS features across BridgeNote.io and ConfirmAddress.app. Implemented authenticated systems using Supabase (RLS/RBAC), secure PostgreSQL schemas, and integrated Stripe, OAuth, and external APIs.</p>
+        <p class="card-desc">Shipped SaaS MVP to production across BridgeNote.io and ConfirmAddress.app. Implemented
+          authenticated systems using Supabase (RLS/RBAC), secure PostgreSQL schemas, and integrated Stripe, OAuth, and
+          external APIs.</p>
         <div class="card-tech">React · TypeScript · Supabase · PostgreSQL · OAuth 2.0 · Stripe</div>
       </div>
       <div class="card glow-card">
@@ -663,7 +757,8 @@
           <span class="card-title">Full-Stack Developer — Trust2Connect.ai</span>
           <span class="card-meta">Dec 2025</span>
         </div>
-        <p class="card-desc">Built a production-ready data extraction and transformation pipeline to migrate enterprise meeting intelligence into structured CRM data.</p>
+        <p class="card-desc">Built a production-ready data extraction and transformation pipeline to migrate enterprise
+          meeting intelligence into structured CRM data.</p>
         <div class="card-tech">Python · OAuth 2.0 · Google Drive API · ETL</div>
       </div>
     </div>
@@ -671,69 +766,87 @@
 
   <section class="reveal" id="projects-section">
     <p class="label">Projects</p>
-    <div class="carousel-container" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Project showcase">
+    <div class="carousel-container" tabindex="0" role="region" aria-roledescription="carousel"
+      aria-label="Project showcase">
       <div class="carousel-scene">
         <div class="carousel" id="projects-carousel">
           <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="1 of 7">
             <div class="card-header">
               <span class="card-title">Webquity — ADHD Study Platform (2026)</span>
-              <a href="https://adhdstudyapp.vercel.app" class="card-meta" target="_blank" rel="noopener">View Project ↗</a>
+              <a href="https://adhdstudyapp.vercel.app" class="card-meta" target="_blank" rel="noopener">View Project
+                ↗</a>
             </div>
-            <p class="card-desc">Senior Design Project sponsored by Webquity. A gamified, distraction-free task management system for neurodivergent students, featuring an AI "Focus Buddy" and role-based dashboards.</p>
+            <p class="card-desc">Senior Design Project sponsored by Webquity. A gamified, distraction-free task
+              management system for neurodivergent students, featuring an AI "Focus Buddy" and role-based dashboards.
+            </p>
             <div class="card-tech">React · TypeScript · Supabase · AI · Tailwind CSS · Vite</div>
           </div>
           <div class="carousel-item">
             <div class="card-header">
               <span class="card-title">Human-Limited SOC Simulator (2025)</span>
-              <a href="https://github.com/RHSuresh/HumanLimitedSOCSim" class="card-meta" target="_blank" rel="noopener">View Project ↗</a>
+              <a href="https://github.com/RHSuresh/HumanLimitedSOCSim" class="card-meta" target="_blank"
+                rel="noopener">View Project ↗</a>
             </div>
-            <p class="card-desc">Designed a Python simulation modeling how analyst cognitive load and alert fatigue impact true threat detection over an 8-hour shift, reducing true positives by ~30% under controlled conditions.</p>
+            <p class="card-desc">Designed a Python simulation modeling how analyst cognitive load and alert fatigue
+              impact true threat detection over an 8-hour shift, reducing true positives by ~30% under controlled
+              conditions.</p>
             <div class="card-tech">Python · Security Analytics · Cognitive Modeling</div>
           </div>
           <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="2 of 7">
             <div class="card-header">
               <span class="card-title">Illegal Parking Detection System (2025)</span>
-              <a href="https://github.com/RHSuresh/Projects/tree/main/Illegal%20Parking%20Detection" class="card-meta" target="_blank" rel="noopener">View Project ↗</a>
+              <a href="https://github.com/RHSuresh/Projects/tree/main/Illegal%20Parking%20Detection" class="card-meta"
+                target="_blank" rel="noopener">View Project ↗</a>
             </div>
-            <p class="card-desc">Computer vision pipeline to detect illegally parked vehicles from real-time video feeds for automated monitoring.</p>
+            <p class="card-desc">Computer vision pipeline to detect illegally parked vehicles from real-time video feeds
+              for automated monitoring.</p>
             <div class="card-tech">Computer Vision · MongoDB · Docker · Jupyter</div>
           </div>
           <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="3 of 7">
             <div class="card-header">
               <span class="card-title">HTTP Security Headers Monitor (2025)</span>
-              <a href="https://github.com/RHSuresh/Projects/tree/main/4402Project" class="card-meta" target="_blank" rel="noopener">View Project ↗</a>
+              <a href="https://github.com/RHSuresh/Projects/tree/main/4402Project" class="card-meta" target="_blank"
+                rel="noopener">View Project ↗</a>
             </div>
-            <p class="card-desc">Scanned and analyzed 20,000 websites to assess HTTP security header adoption. Identified CSP misconfigurations.</p>
+            <p class="card-desc">Scanned and analyzed 20,000 websites to assess HTTP security header adoption.
+              Identified CSP misconfigurations.</p>
             <div class="card-tech">Python · asyncio · aiohttp · matplotlib</div>
           </div>
           <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="4 of 7">
             <div class="card-header">
               <span class="card-title">Hate Speech Classification Model (2025)</span>
-              <a href="https://github.com/RHSuresh/Projects/tree/main/Hate%20Speech%20Classification%20Model" class="card-meta" target="_blank" rel="noopener">View Project ↗</a>
+              <a href="https://github.com/RHSuresh/Projects/tree/main/Hate%20Speech%20Classification%20Model"
+                class="card-meta" target="_blank" rel="noopener">View Project ↗</a>
             </div>
-            <p class="card-desc">End-to-end ML pipeline to classify hate speech using cleaned and tokenized datasets with logistic regression.</p>
+            <p class="card-desc">End-to-end ML pipeline to classify hate speech using cleaned and tokenized datasets
+              with logistic regression.</p>
             <div class="card-tech">Python · Pandas · NumPy · Machine Learning</div>
           </div>
           <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="5 of 7">
             <div class="card-header">
               <span class="card-title">Pet Adoption Platform (2025)</span>
-              <a href="https://github.com/RHSuresh/Projects/tree/main/cse2102-spring25-team3-main" class="card-meta" target="_blank" rel="noopener">View Project ↗</a>
+              <a href="https://github.com/RHSuresh/Projects/tree/main/cse2102-spring25-team3-main" class="card-meta"
+                target="_blank" rel="noopener">View Project ↗</a>
             </div>
-            <p class="card-desc">Full-stack application for managing pet adoptions with containerized services and CI/CD via GitHub Actions.</p>
+            <p class="card-desc">Full-stack application for managing pet adoptions with containerized services and CI/CD
+              via GitHub Actions.</p>
             <div class="card-tech">React · Flask · Docker · SQLite · GitHub Actions</div>
           </div>
           <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="6 of 7">
             <div class="card-header">
               <span class="card-title">Elevator Control System Simulator (2024)</span>
             </div>
-            <p class="card-desc">Real-time elevator control simulator with graphical output and CLI-driven testing for request scheduling logic.</p>
+            <p class="card-desc">Real-time elevator control simulator with graphical output and CLI-driven testing for
+              request scheduling logic.</p>
             <div class="card-tech">C++ · Allegro 5 · Object-Oriented Design</div>
           </div>
           <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="7 of 7">
             <div class="card-header">
               <span class="card-title">SPECTRE Side-Channel Attack (CVE-2017-5753) Simulation (2026)</span>
             </div>
-            <p class="card-desc">Ran Spectre attack in C on Linux VM exploiting CPU speculative execution + branch predictor training to extract protected memory via FLUSH+RELOAD cache-timing technique with 982/1000 hit accuracy recovering secret byte values.</p>
+            <p class="card-desc">Ran Spectre attack in C on Linux VM exploiting CPU speculative execution + branch
+              predictor training to extract protected memory via FLUSH+RELOAD cache-timing technique with 982/1000 hit
+              accuracy recovering secret byte values.</p>
             <div class="card-tech">Oracle VirtualBox · Bash · C · AMD64 Assembly</div>
           </div>
         </div>
@@ -748,7 +861,8 @@
 
   <div class="cta reveal">
     <p>Have a project you want to ship securely?</p>
-    <a href="https://cal.com/rohit-h-suresh/15min" class="waitlist-btn" target="_blank" rel="noopener">Schedule a call</a>
+    <a href="https://cal.com/rohit-h-suresh/15min" class="waitlist-btn" target="_blank" rel="noopener">Schedule a
+      call</a>
   </div>
 
   <footer class="site-footer reveal">
@@ -764,214 +878,215 @@
     <p class="footer-copy">&copy; 2026 Rohit Suresh</p>
   </footer>
 
-<script>
-// ── Theme Toggle Logic with localStorage ──
-const btn = document.getElementById('theme-btn');
+  <script>
+    // ── Theme Toggle Logic with localStorage ──
+    const btn = document.getElementById('theme-btn');
 
-// Restore saved preference, default to dark
-const saved = localStorage.getItem('theme');
-let isDark = saved ? saved === 'dark' : true;
-document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-btn.innerText = isDark ? '[LIGHT]' : '[DARK]';
+    // Restore saved preference, default to dark
+    const saved = localStorage.getItem('theme');
+    let isDark = saved ? saved === 'dark' : true;
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    btn.innerText = isDark ? '[LIGHT]' : '[DARK]';
 
-function toggleTheme() {
-  isDark = !isDark;
-  document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-  btn.innerText = isDark ? '[LIGHT]' : '[DARK]';
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-}
-
-btn.addEventListener('click', toggleTheme);
-
-// ── Scroll Reveal (Intersection Observer) ──
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      // Optional: Stop observing once revealed
-      // revealObserver.unobserve(entry.target); 
+    function toggleTheme() {
+      isDark = !isDark;
+      document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+      btn.innerText = isDark ? '[LIGHT]' : '[DARK]';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
     }
-  });
-}, { threshold: 0.1 });
 
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    btn.addEventListener('click', toggleTheme);
 
-// ── Glow Card Mouse Tracking ──
-document.querySelectorAll('.glow-card').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    
-    card.style.setProperty('--mouse-x', `${x}px`);
-    card.style.setProperty('--mouse-y', `${y}px`);
+    // ── Scroll Reveal (Intersection Observer) ──
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          // Optional: Stop observing once revealed
+          // revealObserver.unobserve(entry.target); 
+        }
+      });
+    }, { threshold: 0.1 });
 
-    // Subtle 3D Tilt Effect
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const rotateX = ((y - centerY) / centerY) * -4; // Max 4 deg
-    const rotateY = ((x - centerX) / centerX) * 4;
-    
-    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-  });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-  });
-});
+    // ── Glow Card Mouse Tracking ──
+    document.querySelectorAll('.glow-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
-// ── 3D Carousel Logic ──
-const carousel = document.getElementById('projects-carousel');
-const items = document.querySelectorAll('.carousel-item');
-const prevBtn = document.getElementById('prev-btn');
-const nextBtn = document.getElementById('next-btn');
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
 
-let currImage = 0;
-const numImages = items.length;
-const theta = 360 / numImages;
-// Calculate radius to perfectly fit items based on width
-// width / (2 * tan(PI / numImages)) + some padding
-const radius = Math.round((280 / 2) / Math.tan(Math.PI / numImages)) + 60; 
+        // Subtle 3D Tilt Effect
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -4; // Max 4 deg
+        const rotateY = ((x - centerX) / centerX) * 4;
 
-function setupCarousel() {
-  items.forEach((item, index) => {
-    const itemAngle = theta * index;
-    item.style.transform = `rotateY(${itemAngle}deg) translateZ(${radius}px)`;
-  });
-  rotateCarousel();
-}
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+      });
 
-const counterEl = document.getElementById('carousel-counter');
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+      });
+    });
 
-function rotateCarousel() {
-  carousel.style.transform = `translateZ(${-radius}px) rotateY(${currImage * -theta}deg)`;
-  
-  // Highlight front item
-  const activeIndex = (currImage % numImages + numImages) % numImages;
-  items.forEach((item, index) => {
-    if (index === activeIndex) {
-      item.classList.add('active');
-      item.style.opacity = '1';
-      item.style.pointerEvents = 'auto';
-    } else {
-      item.classList.remove('active');
-      item.style.opacity = '0.5';
-      item.style.pointerEvents = 'none'; // Prevent clicking items in back
+    // ── 3D Carousel Logic ──
+    const carousel = document.getElementById('projects-carousel');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    let currImage = 0;
+    const numImages = items.length;
+    const theta = 360 / numImages;
+    // Calculate radius to perfectly fit items based on width
+    // width / (2 * tan(PI / numImages)) + some padding
+    const radius = Math.round((280 / 2) / Math.tan(Math.PI / numImages)) + 60;
+
+    function setupCarousel() {
+      items.forEach((item, index) => {
+        const itemAngle = theta * index;
+        item.style.transform = `rotateY(${itemAngle}deg) translateZ(${radius}px)`;
+      });
+      rotateCarousel();
     }
-  });
 
-  // Update counter
-  counterEl.textContent = `${activeIndex + 1} / ${numImages}`;
-}
+    const counterEl = document.getElementById('carousel-counter');
 
-prevBtn.addEventListener('click', () => {
-  currImage--;
-  rotateCarousel();
-  resetAutoPlay();
-});
+    function rotateCarousel() {
+      carousel.style.transform = `translateZ(${-radius}px) rotateY(${currImage * -theta}deg)`;
 
-nextBtn.addEventListener('click', () => {
-  currImage++;
-  rotateCarousel();
-  resetAutoPlay();
-});
+      // Highlight front item
+      const activeIndex = (currImage % numImages + numImages) % numImages;
+      items.forEach((item, index) => {
+        if (index === activeIndex) {
+          item.classList.add('active');
+          item.style.opacity = '1';
+          item.style.pointerEvents = 'auto';
+        } else {
+          item.classList.remove('active');
+          item.style.opacity = '0.5';
+          item.style.pointerEvents = 'none'; // Prevent clicking items in back
+        }
+      });
 
-// Keyboard Navigation
-const carouselContainer = document.querySelector('.carousel-container');
-carouselContainer.addEventListener('keydown', (e) => {
-  if (e.key === 'ArrowLeft') {
-    e.preventDefault();
-    currImage--;
-    rotateCarousel();
-    resetAutoPlay();
-  } else if (e.key === 'ArrowRight') {
-    e.preventDefault();
-    currImage++;
-    rotateCarousel();
-    resetAutoPlay();
-  }
-});
+      // Update counter
+      counterEl.textContent = `${activeIndex + 1} / ${numImages}`;
+    }
 
-// Drag to Rotate
-let isDragging = false;
-let startX;
-let currentX;
+    prevBtn.addEventListener('click', () => {
+      currImage--;
+      rotateCarousel();
+      resetAutoPlay();
+    });
 
-carousel.addEventListener('mousedown', (e) => {
-  isDragging = true;
-  startX = e.pageX;
-  carousel.style.transition = 'none'; // Remove transition for smooth dragging
-});
+    nextBtn.addEventListener('click', () => {
+      currImage++;
+      rotateCarousel();
+      resetAutoPlay();
+    });
 
-document.addEventListener('mousemove', (e) => {
-  if (!isDragging) return;
-  currentX = e.pageX;
-  const diff = currentX - startX;
-  const rotation = (currImage * -theta) + (diff * 0.2); // Sensitivity
-  carousel.style.transform = `translateZ(${-radius}px) rotateY(${rotation}deg)`;
-});
+    // Keyboard Navigation
+    const carouselContainer = document.querySelector('.carousel-container');
+    carouselContainer.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        currImage--;
+        rotateCarousel();
+        resetAutoPlay();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        currImage++;
+        rotateCarousel();
+        resetAutoPlay();
+      }
+    });
 
-document.addEventListener('mouseup', (e) => {
-  if (!isDragging) return;
-  isDragging = false;
-  carousel.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
-  
-  const diff = currentX - startX;
-  if (Math.abs(diff) > 50) { // Threshold for swipe
-    if (diff > 0) currImage--;
-    else currImage++;
-  }
-  rotateCarousel();
-  resetAutoPlay();
-});
+    // Drag to Rotate
+    let isDragging = false;
+    let startX;
+    let currentX;
 
-// Touch Events for Mobile Drag
-carousel.addEventListener('touchstart', (e) => {
-  isDragging = true;
-  startX = e.touches[0].pageX;
-  carousel.style.transition = 'none';
-}, {passive: true});
+    carousel.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.pageX;
+      carousel.style.transition = 'none'; // Remove transition for smooth dragging
+    });
 
-document.addEventListener('touchmove', (e) => {
-  if (!isDragging) return;
-  currentX = e.touches[0].pageX;
-  const diff = currentX - startX;
-  const rotation = (currImage * -theta) + (diff * 0.2);
-  carousel.style.transform = `translateZ(${-radius}px) rotateY(${rotation}deg)`;
-}, {passive: true});
+    document.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      currentX = e.pageX;
+      const diff = currentX - startX;
+      const rotation = (currImage * -theta) + (diff * 0.2); // Sensitivity
+      carousel.style.transform = `translateZ(${-radius}px) rotateY(${rotation}deg)`;
+    });
 
-document.addEventListener('touchend', (e) => {
-  if (!isDragging) return;
-  isDragging = false;
-  carousel.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
-  
-  const diff = currentX - startX;
-  if (Math.abs(diff) > 30) { 
-    if (diff > 0) currImage--;
-    else currImage++;
-  }
-  rotateCarousel();
-  resetAutoPlay();
-});
+    document.addEventListener('mouseup', (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      carousel.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
 
-// Auto-Play
-let autoPlayInterval;
+      const diff = currentX - startX;
+      if (Math.abs(diff) > 50) { // Threshold for swipe
+        if (diff > 0) currImage--;
+        else currImage++;
+      }
+      rotateCarousel();
+      resetAutoPlay();
+    });
 
-function startAutoPlay() {
-  autoPlayInterval = setInterval(() => {
-    currImage++;
-    rotateCarousel();
-  }, 4000); // 4 seconds
-}
+    // Touch Events for Mobile Drag
+    carousel.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      startX = e.touches[0].pageX;
+      carousel.style.transition = 'none';
+    }, { passive: true });
 
-function resetAutoPlay() {
-  clearInterval(autoPlayInterval);
-  startAutoPlay();
-}
+    document.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      currentX = e.touches[0].pageX;
+      const diff = currentX - startX;
+      const rotation = (currImage * -theta) + (diff * 0.2);
+      carousel.style.transform = `translateZ(${-radius}px) rotateY(${rotation}deg)`;
+    }, { passive: true });
 
-// Init
-setupCarousel();
-startAutoPlay();
-</script>
+    document.addEventListener('touchend', (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      carousel.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+
+      const diff = currentX - startX;
+      if (Math.abs(diff) > 30) {
+        if (diff > 0) currImage--;
+        else currImage++;
+      }
+      rotateCarousel();
+      resetAutoPlay();
+    });
+
+    // Auto-Play
+    let autoPlayInterval;
+
+    function startAutoPlay() {
+      autoPlayInterval = setInterval(() => {
+        currImage++;
+        rotateCarousel();
+      }, 4000); // 4 seconds
+    }
+
+    function resetAutoPlay() {
+      clearInterval(autoPlayInterval);
+      startAutoPlay();
+    }
+
+    // Init
+    setupCarousel();
+    startAutoPlay();
+  </script>
 </body>
+
 </html>
