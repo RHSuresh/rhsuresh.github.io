@@ -29,6 +29,7 @@
   <meta name="twitter:title" content="Products & Services — Rohit Suresh">
   <meta name="twitter:description" content="From Ponder, a local-first productivity app, to production ETL pipelines and data integration consulting.">
   <meta name="twitter:image" content="https://rhsuresh.github.io/og-image.png">
+  <link rel="stylesheet" href="SideRays.css">
   <link
     href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@300;400&display=swap"
     rel="stylesheet">
@@ -52,7 +53,6 @@
       --highlight: #e8e4dc;
       --cta-text: #fdfcf9;
       --grid-line: rgba(26, 24, 20, 0.05);
-      --glow: rgba(216, 90, 30, 0.16);
     }
 
     [data-theme="dark"] {
@@ -66,7 +66,6 @@
       --highlight: #222222;
       --cta-text: #111111;
       --grid-line: rgba(255, 255, 255, 0.05);
-      --glow: rgba(216, 90, 30, 0.28);
     }
 
     html,
@@ -128,23 +127,7 @@
       color: var(--text);
     }
 
-    /* ── Header / Glow ── */
-    header {
-      position: relative;
-    }
 
-    header::before {
-      content: '';
-      position: absolute;
-      top: -120px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 760px;
-      height: 760px;
-      background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
-      z-index: -1;
-      pointer-events: none;
-    }
 
     nav {
       display: flex;
@@ -441,6 +424,9 @@
   <!-- Base Grid Background Layer -->
   <div class="bg-grid-layer"></div>
 
+  <!-- Side Rays Background Layer -->
+  <div class="side-rays-container"></div>
+
   <div class="content">
     <div class="topbar">
       <button id="theme-btn">[LIGHT]</button>
@@ -524,6 +510,26 @@ function toggleTheme() {
 
 btn.addEventListener('click', toggleTheme);
 </script>
+
+  <script type="module">
+    import { initSideRays } from './SideRays.js';
+    const container = document.querySelector('.side-rays-container');
+    if (container) {
+      initSideRays(container, {
+        speed: 3.5,
+        rayColor1: 'var(--ray-color-1)',
+        rayColor2: 'var(--ray-color-2)',
+        intensity: 2.4,
+        spread: 2.9,
+        origin: 'top-left',
+        tilt: 3,
+        saturation: 1.5,
+        blend: 0.75,
+        falloff: 1.6,
+        opacity: 1.0
+      });
+    }
+  </script>
 </body>
 
 </html>

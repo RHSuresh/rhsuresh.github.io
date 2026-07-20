@@ -1,0 +1,24 @@
+.side-rays-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  opacity: var(--ray-opacity);
+  transition: opacity 0.4s ease;
+}
+
+:root, [data-theme="light"] {
+  --ray-color-1: #19796a;
+  --ray-color-2: #96c8ff;
+  --ray-opacity: 0.12;
+}
+
+[data-theme="dark"] {
+  --ray-color-1: #19796a;
+  --ray-color-2: #96c8ff;
+  --ray-opacity: 0.22;
+}
