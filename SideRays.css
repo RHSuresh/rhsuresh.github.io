@@ -13,8 +13,8 @@
 
 :root,
 [data-theme="light"] {
-  --ray-color-1: #ff7700;
-  --ray-color-2: #d8d8d8;
+  --ray-color-1: #00ffcce0;
+  --ray-color-2: #0d8a63;
   --ray-opacity: 0.75;
 }
 
