@@ -11,14 +11,15 @@
   transition: opacity 0.4s ease;
 }
 
-:root, [data-theme="light"] {
-  --ray-color-1: #19796a;
-  --ray-color-2: #96c8ff;
-  --ray-opacity: 0.12;
+:root,
+[data-theme="light"] {
+  --ray-color-1: #ff7700;
+  --ray-color-2: #d8d8d8;
+  --ray-opacity: 0.75;
 }
 
 [data-theme="dark"] {
-  --ray-color-1: #19796a;
-  --ray-color-2: #96c8ff;
-  --ray-opacity: 0.22;
+  --ray-color-1: #ff7700;
+  --ray-color-2: #d8d8d8;
+  --ray-opacity: 0.75;
 }
